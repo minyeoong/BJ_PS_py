@@ -29,3 +29,31 @@ elif(cnt==1):
 #     print(uniqueStr[special_idx])
 
 
+str = input().upper()
+str_set= set(str)
+max = 0
+for i in str_set:
+    if max<str.count(i):
+        max = str.count(i)
+        max_alpha = i
+cnt=0
+for i in str_set:    
+    if max == str.count(i):
+       cnt+=1
+if cnt>1:
+    print('?')
+else:
+    print(max_alpha) 
+    
+'''
+문자열에서 가장 많이 포함된 문자를 출력하는 문제
+중복일 때는 ?를 출력
+난이도: 브1
+
+1.모두 대문자로 바꿔준다.
+2. set함수를 이용한다.
+3. ?가 출력될 경우를 처리해준다.
+
+
+
+'''

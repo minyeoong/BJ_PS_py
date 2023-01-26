@@ -24,3 +24,11 @@ print(cnt)
 #         break
  
 # print(count)
+
+'''
+규칙을 이용해 숫자를 만든다.
+난이도: 브1
+
+한 자리 숫자냐 두 자리 숫자냐 나눈다.
+while 문을 이용해 cnt를 증가시키며 store_num과 새로 만든 num을 비교한다.
+'''
