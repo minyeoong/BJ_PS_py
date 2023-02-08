@@ -65,3 +65,24 @@ next_idx를 추출하는 함수를 만든다.
 next_idx=str.index(i,idx+1) 
 index함수를 이용한다. index(찾을 문자,시작지점,끝지점)
 '''
+
+
+#sol3)
+cnt = int(input())
+for _ in range(cnt):
+    str = input() #abbbca
+    str_set = list(set(str)) #abc
+    flag = True
+    for i in str_set: #a,b,c
+        index = str.index(i)
+        for j in range(len(str)): #aabbbca 5번 0,1,2,3,4,5
+            if str[j]== i:
+                if j-index>1:
+                    flag =False
+                    break
+                else:
+                    index = j
+    if flag ==False:
+        cnt-=1
+print(cnt)
+

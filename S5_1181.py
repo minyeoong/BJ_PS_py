@@ -49,6 +49,7 @@ for i in range(1, len(strs)):
     key = strs[i]
     j = i - 1
     while j >= 0 and (len(strs[j]) > len(key) or (len(strs[j]) == len(key) and strs[j] > key)):
+        #길이가 같은 경우엔 사전 순서가 기준이 된다. (len(strs[j]) == len(key) and strs[j] > key) 
         strs[j + 1] = strs[j]
         j -= 1
     strs[j + 1] = key
@@ -57,3 +58,32 @@ for word in strs:
     print(word)
 
 
+
+N = int(input())
+strs = []
+for _ in range(N):
+    strs.append(input())
+
+    # remove duplicates
+strs = list(set(strs))
+
+    # sort strings based on length
+strs.sort(key=lambda x: (len(x), x))
+
+for word in strs:
+    print(word)
+
+
+
+n = int(input())
+lst = []
+
+for i in range(n):
+    lst.append(input())
+lst = list(set(lst)) #set을 다시 list로 바꿔 줘야 한다.
+#set은 순서가 없기 때문에 순서가 있는 list 나 tuple로 다시 바꿔야 한다.
+lst.sort()
+lst.sort(key = len)
+
+for i in lst:
+    print(i)
