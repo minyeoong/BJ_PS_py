@@ -48,6 +48,8 @@ yose = "<"
 cur = 0
 for i in range(N):
     cur = (cur+K-1) % len(Series)
+    #원을 어떻게 인덱스로 표현할지가 어려웠는데
+    #이처럼 나누기를 이용할 수 있었다.
     yose += Series.pop(cur) + ", "
 yose = yose[:-2] + ">"
 print(yose)
