@@ -45,8 +45,8 @@ N = int(input())
 for _ in range(N):
     n = int(input())
     num.append(n)
-one = [0 for _ in range(max(num)+1)]
-zero =[0 for _ in range(max(num)+1)]
+one = [0 for _ in range(max(num)+2)]
+zero =[0 for _ in range(max(num)+2)]
 one[0]=0
 one[1]=1
 zero[0]=1
